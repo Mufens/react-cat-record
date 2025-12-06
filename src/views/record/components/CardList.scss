@@ -1,0 +1,84 @@
+.waterfall-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .waterfall-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+
+    .waterfall-item {
+      margin-bottom: 0px;
+      border-radius: 12px 12px 0 0;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      .image-box {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        overflow: hidden;
+
+        .cover-image {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
+
+      .content-box {
+        padding: 12px;
+
+        .content-text {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 12px;
+          word-break: break-word;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .meta-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: var(--span-color);
+
+          .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .username {
+              font-size: 13px;
+              font-weight: 500;
+            }
+          }
+
+          .view-count {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .hidden-render {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

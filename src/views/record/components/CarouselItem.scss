@@ -1,0 +1,51 @@
+.custom-carousel-item {
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.178);
+  }
+}
+
+.content {
+  margin-left: 22px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+:global(.ant-carousel) {
+  :global(.ant-carousel-dots) {
+    :global(.ant-carousel-dot) {
+      button {
+        width: 6px;
+        height: 6px;
+        background: #ffffff;
+        border-radius: 50%;
+        opacity: 0.5;
+      }
+
+      &.ant-carousel-dot-active {
+        button {
+          width: 14px;
+          height: 6px;
+          background: #ffffff;
+          opacity: 1;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

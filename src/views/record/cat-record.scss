@@ -1,0 +1,62 @@
+:global(.ant-card) {
+  margin: 10px 5px;
+}
+
+.cat-record {
+  min-width: 880px;
+  .right-side {
+    .todoList {
+      position: sticky;
+      top: 20px;
+      margin-bottom: 10px;
+      .summary {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 5px;
+        overflow: hidden;
+        
+        .all,
+        .submit,
+        .contribution {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 5px;
+          box-sizing: border-box;
+          overflow: hidden;
+          
+          .a {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: var(--span-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            text-align: center;
+          }
+          
+          span {
+            font-family: 'Yahei';
+            font-size: 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            text-align: center;
+            
+            .iconfont {
+              font-size: 32px;
+              color: var(--text-color-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,46 @@
+.operation {
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--public-bg-color);
+
+  .column {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+
+    &-right {
+      margin-right: 5px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    :global(.ant-btn-primary) {
+      background-color: var(--type-primary-color) !important;
+      border-color: var(--primary-border-color) !important;
+      color: var(--menu-active-text-color) !important;
+
+      &:hover {
+        border-color: var(--menu-active-text-color) !important;
+        background-color: var(--menu-active-text-color) !important;
+        color: #fff !important;
+      }
+    }
+
+    :global(.ant-btn-dangerous) {
+      background-color: var(--type-danger-color) !important;
+      border-color: var(--danger-border-color) !important;
+      color: var(--danger-color) !important;
+
+      &:hover {
+        background-color: #f56c6c !important;
+        color: #fff !important;
+      }
+    }
+  }
+}
+

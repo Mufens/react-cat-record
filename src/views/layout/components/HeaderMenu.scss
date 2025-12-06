@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-line-color);
+  align-items: center;
+  height: 60px;
+  background-color: var(--header-bg-color);
+  border-left: 1px solid var(--border-color);
+  .header-left {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    .collapse-btn {
+      margin-left: 7px;
+      margin-top: 3px;
+      cursor: pointer;
+      color: var(--text-color-primary);
+      font-size: 18px;
+    }
+    .bread-container {
+      margin-left: 18px;
+
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
+    }
+  }
+  .header-right {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    .iconfont {
+      color: var(--text-color-primary);
+    }
+
+    .user {
+      margin: 20px;
+      .dropdown-box {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .ant-avatar {
+          margin-top: 8px;
+        }
+        .name {
+          padding: 22px 5px;
+        }
+
+        .arrow {
+          margin: 17px 0px;
+        }
+      }
+    }
+  }
+}
+

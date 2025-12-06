@@ -1,0 +1,159 @@
+.tab-container {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  overflow: hidden;
+  overflow-x: auto;
+  border-left: 1px solid var(--border-line-color) !important;
+  border-bottom: 1px solid var(--border-line-color) !important;
+  background-color: var(--public-bg-color) !important;
+  
+  &::-webkit-scrollbar {
+    height: 5px;
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--menu-hover-bg2, rgba(245, 245, 245, 0.5));
+    border-radius: 2px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--text-color-primary, #c1c1c1);
+    border-radius: 2px;
+    opacity: 0.5;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color-primary, #c1c1c1) var(--menu-hover-bg2, rgba(245, 245, 245, 0.5));
+
+  :global(.ant-tabs) {
+    flex: 1;
+    margin: 20px 0 0 4px;
+    
+    .ant-tabs-nav {
+      border: none !important;
+      margin: 0 !important;
+      
+      &::before {
+        border: none !important;
+      }
+    }
+    
+    .ant-tabs-tab {
+      border: none !important;
+      border-radius: 4px !important;
+      padding: 0 16px !important;
+      margin-right: 2px !important;
+      position: relative;
+      transition: all 0.3s !important;
+      color: var(--text-color-primary) !important;
+      background-color: transparent !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      
+      .ant-tabs-tab-btn {
+        color: var(--text-color-primary) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        
+        .iconfont {
+          color: var(--text-color-primary) !important;
+          margin-right: 4px;
+        }
+      }
+      
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: -3px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 1px;
+        background-color: var(--border-line-color, #ddd);
+      }
+      
+      &:last-child {
+        margin-right: 0 !important;
+      }
+      
+      &:not(.ant-tabs-tab-active):hover {
+        color: var(--text-color-primary) !important;
+        background-color: var(--menu-hover-bg2) !important;
+        
+        .ant-tabs-tab-btn {
+          color: var(--text-color-primary) !important;
+        }
+      }
+    }
+    
+    .ant-tabs-ink-bar {
+      display: none !important;
+    }
+    
+    .ant-tabs-tab-remove {
+      color: var(--text-color-primary) !important;
+      margin-left: 8px;
+      
+      &:hover {
+        color: var(--menu-active-text-color) !important;
+        background-color: var(--menu-hover-bg) !important;
+      }
+    }
+  }
+
+  // 针对 card 类型标签页的特定样式，使用最具体的选择器
+  // 直接在 .tab-container 内部定义，提高选择器优先级
+  :global {
+    .tab-container .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active {
+      color: var(--menu-active-text-color) !important;
+      background-color: var(--menu-bg2) !important;
+      border-color: transparent !important;
+      
+      .ant-tabs-tab-btn {
+        color: var(--menu-active-text-color) !important;
+        
+        .iconfont {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+    }
+
+    .tab-container .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active {
+      color: var(--menu-active-text-color) !important;
+      background-color: var(--menu-bg2) !important;
+      border-color: transparent !important;
+      
+      .ant-tabs-tab-btn {
+        color: var(--menu-active-text-color) !important;
+        
+        .iconfont {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+    }
+  }
+  
+  .tab-actions {
+    margin-right: 10px;
+    padding: 12px;
+    border-left: 2px solid var(--border-color, var(--border-line-color)) !important;
+    border-right: 2px solid var(--border-color, var(--border-line-color)) !important;
+    cursor: pointer;
+    color: var(--text-color-primary) !important;
+    
+    &:hover {
+      color: var(--menu-active-text-color) !important;
+      background-color: var(--menu-hover-bg2) !important;
+    }
+  }
+}
+

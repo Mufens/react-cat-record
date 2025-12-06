@@ -1,0 +1,136 @@
+.calendar {
+  &-title {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    height: 150px;
+    overflow: hidden;
+    background-size: 400% 100%;
+    background-position-y: center;
+    transition: background-position-x 0.3s ease;
+    transform: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    
+    .day,
+    .year,
+    .month {
+      &.spring {
+        background: -webkit-linear-gradient(45deg, #2d98419b 30%, #84c74ac2 60%, #47c09e65 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      &.summer {
+        background: -webkit-radial-gradient(#99755963 20%, #4abbc7f7 50%, #48cd8ac3 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      &.autumn {
+        background-color: #897042bb;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      &.winter {
+        background: linear-gradient(to bottom, #a4d7fe, #bfc8dc, #a5c8d5);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      color: transparent;
+    }
+
+    .day {
+      margin-left: 20px;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 70px;
+    }
+    
+    .ym {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: flex-end;
+      
+      .year {
+        font-weight: bold;
+        font-size: 14px;
+      }
+      
+      .month {
+        font-weight: bold;
+        font-size: 28px;
+      }
+    }
+
+    .change {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: transparent;
+      color: #fff;
+      opacity: 0;
+      
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.5);
+       
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+    }
+    
+    &:hover .change {
+      opacity: 1;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  
+  &.title {
+    font-weight: bold;
+    color: var(--text-color-primary);
+    
+    span {
+      width: calc(100% / 7);
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  
+  &.content {
+    flex-wrap: wrap;
+    
+    span {
+      font-family: 'YaHei';
+      width: calc(100% / 7);
+      text-align: center;
+      padding: 4px 0;
+      
+      &.not-current {
+        color: #aeb1b7;
+      }
+    }
+  }
+}
+

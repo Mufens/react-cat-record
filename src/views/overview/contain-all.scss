@@ -1,0 +1,151 @@
+.all {
+  margin: 10px;
+  min-width: 1000px;
+}
+
+.stat-card {
+  :global(.ant-card-body) {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-height: 100px;
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+}
+
+.ant-card {
+  margin: 8px 6px;
+}
+
+.card {
+  .icon {
+    height: 56px;
+    width: 56px;
+    min-width: 56px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    .iconfont {
+      font-size: 24px;
+      color: #fff !important;
+    }
+
+    &.first {
+      background: radial-gradient(at top left, #67b3da, #98d0e6);
+      .iconfont {
+        font-size: 32px;
+      }
+    }
+    &.second {
+      background: radial-gradient(at top left, #ea9381, #f0b09f);
+    }
+    &.third {
+      background: radial-gradient(at top left, #fea0b1, #f7bac3);
+      .iconfont {
+        font-size: 32px;
+      }
+    }
+    &.fourth {
+      background: radial-gradient(at top left, #96ccbe, #96c9a3);
+    }
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  gap: 8px;
+  
+  .name {
+    font-size: 14px;
+    color: var(--text-color-primary, #666);
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    width: 100%;
+  }
+  
+  .num {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: nowrap;
+    width: 100%;
+    
+    .count {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-color-primary, #333);
+      line-height: 1.2;
+    }
+    
+    .change {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.card-header {
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+.card-header-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-header-desc {
+  font-size: 14px;
+  color: #999;
+}
+
+.chart1 {
+  width: 100%;
+  height: 400px;
+}
+
+.rank {
+  .rank-item {
+    display: flex;
+    margin: 8px 0;
+    padding: 10px 0;
+
+    &-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 38px;
+      color: white;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    &-content {
+      flex: 1;
+      .rank-item-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.timeline-item {
+  font-size: 14px;
+}
+

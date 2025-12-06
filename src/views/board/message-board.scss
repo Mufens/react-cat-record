@@ -1,0 +1,68 @@
+.board {
+  position: relative;
+  margin: 10px;
+  height: 500px;
+}
+
+.message-form {
+  display: flex;
+  padding-top: 10px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.control {
+  display: flex;
+  padding-top: 10px;
+  margin-left: -30px;
+  gap: 10px;
+}
+
+input {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  margin-right: 10px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--menu-active-text-color);
+  }
+}
+
+:global(.ant-btn) {
+  border: none;
+  border-radius: 20px;
+}
+
+.bullet-item {
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.baberrage {
+  position: relative;
+  top: 20px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.danmaku {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.danmaku-item {
+  white-space: nowrap;
+  will-change: transform;
+}
+

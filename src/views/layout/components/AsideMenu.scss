@@ -1,0 +1,103 @@
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1002;
+  width: 180px;
+  height: 100vh;
+  border-right: 1px solid var(--border-color);
+  overflow-x: hidden;
+  background-color: var(--aside-bg-color);
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_logo {
+    height: 150px;
+    background: url('@/assets/images/logo.png') no-repeat center / 200px auto;
+  }
+}
+
+.iconfont {
+  margin-right: 5px;
+}
+
+.aside-menu {
+  border-right: none !important;
+  width: 100% !important;
+  background-color: var(--aside-bg-color) !important;
+  color: var(--text-color-primary) !important;
+
+  .ant-menu-item {
+    height: 46px !important;
+    color: var(--text-color-primary) !important;
+    margin: 4px 8px !important;
+    border-radius: 4px !important;
+    line-height: 46px !important;
+
+    &:hover {
+      background-color: var(--menu-hover-bg) !important;
+      color: var(--text-color-primary) !important;
+    }
+
+    &.ant-menu-item-selected {
+      background-color: var(--menu-bg2) !important;
+      color: var(--menu-active-text-color) !important;
+
+      &::after {
+        display: none !important;
+      }
+
+      .iconfont {
+        color: var(--menu-active-text-color) !important;
+      }
+    }
+
+    .iconfont {
+      color: var(--text-color-primary) !important;
+      margin-right: 5px !important;
+    }
+  }
+
+  .ant-menu-submenu {
+    .ant-menu-submenu-title {
+      color: var(--text-color-primary) !important;
+      margin: 4px 8px !important;
+      border-radius: 4px !important;
+      height: 46px !important;
+      line-height: 46px !important;
+
+      &:hover {
+        background-color: var(--menu-hover-bg) !important;
+        color: var(--text-color-primary) !important;
+      }
+
+      .iconfont {
+        color: var(--text-color-primary) !important;
+        margin-right: 5px !important;
+      }
+    }
+
+    &.ant-menu-submenu-open {
+      .ant-menu-submenu-title {
+        color: var(--menu-active-text-color) !important;
+
+        .iconfont {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+    }
+
+    .ant-menu {
+      background-color: transparent !important;
+
+      .ant-menu-item {
+        padding-left: 40px !important;
+        height: 46px !important;
+        line-height: 46px !important;
+      }
+    }
+  }
+}
+

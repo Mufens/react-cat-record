@@ -1,0 +1,456 @@
+:root {
+  --color-primary: #e0a2aa;
+  --text-color-primary: #c68280;
+  --bg-color: #fbced3;
+  --aside-bg-color: #fbced3;
+  --header-bg-color: #fbced3;
+  --menu-active-text-color: #f67a95;
+  --border-line-color: #e4e7ed;
+  --span-color: #606266;
+  --public-bg-color: #ffffff;
+  //文字颜色
+  --message-panel-text: #333;
+  //菜单hover颜色
+  --menu-hover-bg: #fce4e9;
+  //el-tabs标签页悬浮颜色
+  --menu-hover-bg2: #f5f4f4;
+  //el-tabs激活背景色
+  --menu-bg2: #fce4e9;
+  //评分颜色
+  --rate-color: #e0a2aa;
+  //表格悬浮颜色
+  --table-hover-color: #f5f7fa;
+  //实心按钮颜色
+  --button-color: #fce4e9;
+  --type-primary-color: #fff0f0;
+  --primary-border-color: #ffd1d8;
+  --type-danger-color: #fff1f0;
+  --danger-color: #ff7875;
+  --danger-border-color: #fab6b6;
+  //日期选择背景
+  --date-choose-bg: #fff0f0;
+  --border-color: #e4e7ed;
+  --bg-color1: #ffffff;
+}
+
+.grape {
+  --color-primary: #d8d3f1;
+  --text-color-primary: #8e7f86;
+  --bg-color: #d8d3f1;
+  --aside-bg-color: #d8d3f1;
+  --header-bg-color: #d8d3f1;
+  --menu-active-text-color: #f090c0;
+  --menu-hover-bg: #e4def6;
+  --menu-bg2: #e4def6;
+  --rate-color: #c1b7eb;
+  --button-color: #e4def6;
+  --type-primary-color: #fff0f5;
+  --primary-border-color: #d9d1f7;
+  --date-choose-bg: #f5f0ff;
+}
+
+.blusky {
+  --color-primary: #a7c7f1;
+  --text-color-primary: #677fac;
+  --bg-color: #a7c7f1;
+  --aside-bg-color: #a7c7f1;
+  --header-bg-color: #a7c7f1;
+  --menu-active-text-color: #5b89d8;
+  --menu-hover-bg: #b7cdec;
+  --menu-bg2: #b7cdec;
+  --rate-color: #a7c7f1;
+  --button-color: #b7cdec;
+  --type-primary-color: #e1eef7;
+  --primary-border-color: #aed6f9;
+  --date-choose-bg: #f0f5ff;
+}
+
+.water {
+  --color-primary: #cce7e0;
+  --text-color-primary: #587589;
+  --bg-color: #cce7e0;
+  --aside-bg-color: #cce7e0;
+  --header-bg-color: #cce7e0;
+  --menu-active-text-color: #67a0c0;
+  --menu-hover-bg: #d8f5ea;
+  --menu-bg2: #d8f5ea;
+  --rate-color: #84b5d1;
+  --button-color: #d8f5ea;
+  --type-primary-color: #d8f5ea;
+  --primary-border-color: #cce7e0;
+  --date-choose-bg: #eaf7f1;
+}
+
+.momo {
+  --color-primary: #bea78b;
+  --text-color-primary: #906b46;
+  --bg-color: #bea78b;
+  --aside-bg-color: #bea78b;
+  --header-bg-color: #bea78b;
+  --menu-active-text-color: #644c24e7;
+  --menu-hover-bg: #b3987a;
+  --menu-bg2: #b3987a;
+  --rate-color: #bea78b;
+  --button-color: #b3987a;
+  --type-primary-color: #fcf3ea;
+  --type-border-color: #c4baaf;
+}
+
+.gaoji {
+  --color-primary: #06b1bd;
+  --text-color-primary: #303133;
+  --bg-color: #06b1bd;
+  --aside-bg-color: #ffffff;
+  --header-bg-color: #f9f3ef;
+  --active-color: #edf3fe;
+  --menu-active-text-color: #4e88f3;
+  --menu-hover-bg: #edf3fe;
+  --menu-hover-bg2: #f2f2f2;
+  --menu-bg2: #d4eef0;
+  --border-color: #e4e7ed;
+  --rate-color: #f9e9be;
+  --button-color: #3c7eff;
+}
+
+.dark {
+  --color-primary: #3c7eff;
+  --text-color-primary: #ffffff;
+  --bg-color: #232324;
+  --aside-bg-color: #232324;
+  --header-bg-color: #232324;
+  --menu-active-text-color: #3c7eff;
+  --menu-hover-bg: #2d2d2d;
+  --menu-hover-bg2: #2d2d2d;
+  --menu-bg2: #2d2d2d;
+  --border-line-color: #333335;
+  --span-color: #cfd3dc;
+  --public-bg-color: #232324;
+  --button-color: #3c7eff;
+  --type-primary-color: #18222c;
+  --primary-border-color: #2a598a;
+  --type-danger-color: #2b1d1d;
+  --danger-border-color: #854040;
+  --date-choose-bg: #2d2d2d;
+  --message-panel-text: #ffffff;
+  --border-color: #333335;
+  --bg-color1: #3a3a3d;
+  --table-hover-color: #262727;
+  --rate-color: #5589ef;
+}
+
+// Ant Design 组件样式覆盖
+:global {
+  // 面包屑文字颜色
+  .ant-breadcrumb {
+    color: var(--text-color-primary) !important;
+    font-size: 14px;
+
+    .ant-breadcrumb-link {
+      color: var(--text-color-primary) !important;
+
+      .iconfont {
+        margin-right: 4px;
+        color: var(--text-color-primary) !important;
+      }
+
+      span {
+        color: var(--text-color-primary) !important;
+      }
+    }
+
+    .ant-breadcrumb-separator {
+      color: var(--text-color-primary) !important;
+      margin: 0 8px;
+    }
+
+    .ant-breadcrumb-item:last-child {
+      .ant-breadcrumb-link {
+        color: var(--menu-active-text-color) !important;
+        font-weight: 500;
+
+        .iconfont {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+    }
+  }
+
+  // 菜单样式
+  .ant-menu {
+    background-color: var(--aside-bg-color) !important;
+    color: var(--text-color-primary) !important;
+    border-right: none !important;
+
+    .ant-menu-item {
+      color: var(--text-color-primary) !important;
+      margin: 4px 8px !important;
+      border-radius: 4px !important;
+
+      &:hover {
+        background-color: var(--menu-hover-bg) !important;
+        color: var(--text-color-primary) !important;
+      }
+
+      &.ant-menu-item-selected {
+        background-color: var(--menu-bg2) !important;
+        color: var(--menu-active-text-color) !important;
+
+        &::after {
+          display: none !important;
+        }
+
+        .iconfont {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+
+      .iconfont {
+        color: var(--text-color-primary) !important;
+      }
+    }
+
+    .ant-menu-submenu {
+      .ant-menu-submenu-title {
+        color: var(--text-color-primary) !important;
+        margin: 4px 8px !important;
+        border-radius: 4px !important;
+
+        &:hover {
+          background-color: var(--menu-hover-bg) !important;
+        }
+
+        .iconfont {
+          color: var(--text-color-primary) !important;
+        }
+      }
+
+      .ant-menu-submenu-open {
+        .ant-menu-submenu-title {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+
+      .ant-menu {
+        background-color: transparent !important;
+      }
+
+      .ant-menu-item {
+        padding-left: 40px !important;
+      }
+    }
+  }
+
+  // 标签页颜色
+  .ant-tabs {
+    .ant-tabs-tab {
+      color: var(--text-color-primary) !important;
+
+      &.ant-tabs-tab-active {
+        color: var(--menu-active-text-color) !important;
+        background-color: var(--menu-bg2) !important;
+
+        .ant-tabs-tab-btn {
+          color: var(--menu-active-text-color) !important;
+        }
+      }
+
+      &:not(.ant-tabs-tab-active):hover {
+        color: var(--text-color-primary) !important;
+        background-color: var(--menu-hover-bg2) !important;
+      }
+    }
+
+    // 使用更具体的选择器确保激活状态样式生效
+    > .ant-tabs-nav {
+      .ant-tabs-tab {
+        &.ant-tabs-tab-active {
+          color: var(--menu-active-text-color) !important;
+          background-color: var(--menu-bg2) !important;
+
+          .ant-tabs-tab-btn {
+            color: var(--menu-active-text-color) !important;
+          }
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      background-color: var(--menu-active-text-color);
+    }
+  }
+
+  // 针对 card 类型标签页的特定样式
+  .ant-tabs-card.ant-tabs-top {
+    > .ant-tabs-nav {
+      .ant-tabs-tab {
+        &.ant-tabs-tab-active {
+          color: var(--menu-active-text-color) !important;
+          background-color: var(--menu-bg2) !important;
+          border-color: transparent !important;
+
+          .ant-tabs-tab-btn {
+            color: var(--menu-active-text-color) !important;
+          }
+        }
+      }
+    }
+  }
+
+  // 通用 card 类型样式
+  .ant-tabs-card {
+    > .ant-tabs-nav {
+      .ant-tabs-tab {
+        &.ant-tabs-tab-active {
+          color: var(--menu-active-text-color) !important;
+          background-color: var(--menu-bg2) !important;
+          border-color: transparent !important;
+
+          .ant-tabs-tab-btn {
+            color: var(--menu-active-text-color) !important;
+          }
+        }
+      }
+    }
+  }
+
+  // 下拉框
+  .ant-dropdown-menu {
+    .ant-dropdown-menu-item {
+      color: var(--text-color-primary) !important;
+
+      &:hover {
+        background-color: var(--menu-bg2) !important;
+        color: var(--menu-active-text-color) !important;
+      }
+    }
+  }
+
+  // 输入框
+  .ant-input:focus,
+  .ant-input-focused {
+    border-color: var(--menu-active-text-color);
+  }
+
+  // 选择框
+  .ant-select-focused .ant-select-selector {
+    border-color: var(--menu-active-text-color) !important;
+  }
+
+  .ant-select-item-option-selected {
+    color: var(--menu-active-text-color);
+  }
+
+  // 按钮
+  .ant-btn {
+    color: var(--text-color-primary);
+
+    &:hover {
+      border-color: var(--menu-active-text-color);
+      color: var(--menu-active-text-color);
+    }
+  }
+
+  .ant-btn-primary {
+    background-color: var(--menu-active-text-color) !important;
+    border-color: var(--button-color) !important;
+    color: #fff !important;
+
+    &:hover {
+      border-color: var(--menu-active-text-color) !important;
+      background-color: var(--menu-active-text-color) !important;
+    }
+  }
+
+  // 分页颜色
+  .ant-pagination {
+    .ant-pagination-item {
+      &.ant-pagination-item-active {
+        background-color: var(--menu-active-text-color);
+        border-color: var(--menu-active-text-color);
+
+        a {
+          color: #fff;
+        }
+      }
+
+      &:not(.ant-pagination-item-active):hover {
+        border-color: var(--menu-active-text-color);
+
+        a {
+          color: var(--menu-active-text-color);
+        }
+      }
+    }
+
+    .ant-pagination-prev:hover,
+    .ant-pagination-next:hover {
+      .ant-pagination-item-link {
+        color: var(--menu-active-text-color);
+      }
+    }
+  }
+
+  // 表格悬浮
+  .ant-table-tbody > tr:hover > td {
+    background-color: var(--table-hover-color) !important;
+  }
+
+  // 选择框
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: var(--menu-active-text-color);
+    border-color: var(--menu-active-text-color);
+  }
+
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner {
+    border-color: var(--menu-active-text-color);
+  }
+
+  // 单选框
+  .ant-radio-checked .ant-radio-inner {
+    border-color: var(--menu-active-text-color) !important;
+
+    &::after {
+      background-color: var(--menu-active-text-color);
+    }
+  }
+
+  .ant-radio-wrapper:hover .ant-radio-inner {
+    border-color: var(--menu-active-text-color) !important;
+  }
+
+  .ant-radio-checked + span {
+    color: var(--menu-active-text-color) !important;
+  }
+
+  // 日期选择器
+  .ant-picker {
+    &:hover,
+    &.ant-picker-focused {
+      border-color: var(--menu-active-text-color);
+    }
+  }
+
+  .ant-picker-cell-selected .ant-picker-cell-inner {
+    background-color: var(--menu-active-text-color) !important;
+    color: #fff !important;
+  }
+
+  .ant-picker-cell-today .ant-picker-cell-inner {
+    color: var(--menu-active-text-color) !important;
+    background-color: var(--bg-color);
+  }
+
+  // 卡片
+  .ant-card {
+    background-color: var(--public-bg-color);
+  }
+
+  .dark .ant-card {
+    background-color: var(--bg-color);
+  }
+
+  // NProgress 进度条
+  #nprogress .bar {
+    background: var(--menu-active-text-color) !important;
+  }
+}

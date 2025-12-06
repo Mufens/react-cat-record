@@ -1,0 +1,41 @@
+.form-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.permission-tree {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 2px 0;
+  font-size: 13px;
+
+  :global(.ant-tree-node-content-wrapper) {
+    height: auto;
+  }
+
+  :global(.is-penultimate) {
+    :global(.ant-tree-child-tree) {
+      display: flex;
+      flex-wrap: wrap;
+
+      :global(.ant-tree-node) {
+        :global(.ant-tree-node-content-wrapper) {
+          height: auto;
+          padding: 0 0px !important;
+        }
+      }
+    }
+  }
+
+  .iconfont {
+    font-size: 13px;
+  }
+}
+
+.tree-node-content {
+  display: flex;
+  align-items: center;
+}
+
