@@ -42,7 +42,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3 # 上传 build 目录作为 Pages 部署产物
         with:
-          path: ./build # 指定上传的目录
+          path: ./dist # 指定上传的目录
 
   # 部署任务，依赖于 build 任务
   deploy:
